@@ -1,0 +1,19 @@
+[package]
+name = "poem-posting-api"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+tokio = { features = ["macros", "rt-multi-thread"] }
+poem = { features = ["tower-compat"] }
+poem-openapi = { features = ["swagger-ui"] }
+sea-orm = { features = ["macros", "runtime-tokio-rustls", "sqlx-postgres", "with-chrono"] }
+sea-orm-migration = "*"
+serde = { features = ["derive"] }
+validator = "*"
+jsonwebtoken = "*"
+argon2 = "*"
+password-hash = "*"
+dotenvy = "*"
+tracing = "*"
+tracing-subscriber = { features = ["fmt", "env-filter"] }
